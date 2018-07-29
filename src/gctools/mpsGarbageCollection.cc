@@ -844,6 +844,34 @@ int initializeMemoryPoolSystem(MainFunctionType startupFn, int argc, char *argv[
   mps_gen_param_s gen_params[] = {
       {nurseryKb, nurseryMortalityFraction},         // { Nursery_size, Nursery_mortality }
       {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
+      {generation1Kb, generation1MortalityFraction}, // { Generation1_size, Generation1_mortality }
   };
 
   mps_res_t res;
