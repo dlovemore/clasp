@@ -1,0 +1,21 @@
+digraph structs {
+node [shape=record];
+notifyLoaded [shape=record,label="{<io> Object|NotifyLoaded}", URL="https://github.com/clasp-developers/clasp/blob/8a8e3820df1bb89edcdbb5d1c0ce636c5a5ec834/src/llvmo/llvmoExpose.cc#L3417-L3422"];
+objectLayer [shape=record,label="ObjectLayer|{{<io> Object| <ir> Resolver}|addObject|<oo> Object}"];
+compileLayer [shape=record,label="CompileLayer|{{<im> Module| <ir> Resolver}|addModule|{<oo> Object| <or> Resolver}}"];
+optimizeLayer [shape=record,label="OptimizeLayer|{{<im> Module| <ir> Resolver}|addModule|{<om> Module| <or> Resolver}}"];
+
+claspJIT_O [shape=record,label="{<im> cM|CLASP\-JIT\-ADD\-MODULE|{<om> Module| <or> Resolver}}", URL="https://github.com/clasp-developers/clasp/blob/8a8e3820df1bb89edcdbb5d1c0ce636c5a5ec834/src/llvmo/llvmoExpose.cc#L3512"];
+
+claspJIT_O:om -> optimizeLayer:im [URL="https://github.com/clasp-developers/clasp/blob/8a8e3820df1bb89edcdbb5d1c0ce636c5a5ec834/src/llvmo/llvmoExpose.cc#L3538"]
+claspJIT_O:or -> optimizeLayer:ir [URL="https://github.com/clasp-developers/clasp/blob/8a8e3820df1bb89edcdbb5d1c0ce636c5a5ec834/src/llvmo/llvmoExpose.cc#L3540"]
+optimizeLayer:om -> compileLayer:im
+optimizeLayer:or -> compileLayer:ir
+compileLayer:oo -> objectLayer:io
+compileLayer:or -> objectLayer:ir
+objectLayer:oo -> notifyLoaded:io
+
+notifyLoaded:e -> save [style=dashed, label="save as lisp object"]
+reload -> objectLayer:io [style=dashed, label="load from lisp object"]
+claspJIT_O:or -> objectLayer:ir [style=dashed, URL="https://github.com/clasp-developers/clasp/blob/8a8e3820df1bb89edcdbb5d1c0ce636c5a5ec834/src/llvmo/llvmoExpose.cc#L3518-L3529", label="uses same resolver as module (I think)"]
+}
